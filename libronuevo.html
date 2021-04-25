@@ -1,0 +1,30 @@
+    var loops = 0;
+	var peopleVisible = false;
+	
+	let startGame = gameLoop;
+	
+    function gameLoop() {
+	  peopleVisible = !peopleVisible;
+	  console.log("uwu");
+	  loops++;
+	  if(loops < 12) {	 
+	    setTimeout(gameLoop, 3000);
+	  } 
+      else {
+        alert("Game over!");
+      }
+    }	
+    function flashCharacters() {
+      var board = document.etElementById("board");
+	  var variableName = condition ? value1 : value2;
+      var classToSet = peopleVisible ? "character visible" : "character hidden";
+      if(peopleVisible) {
+        classToSet = "character visible";
+      }
+      else {
+        classToSet = "character hidden";
+      }
+      for(var index = 0; index < 6; index++) {
+        board.children[index].className = classToSet;
+      }
+    }	  
